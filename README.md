@@ -1,7 +1,7 @@
 # RaftLabs
 
 <p align="center">
-  <h2 align="center">RaftLabs - Task 1 - CRUD Operations</h3>
+  <h2 align="center">RaftLabs - Task 1 - CRUD Operations - JWT Authentication and Authorization</h3>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -30,13 +30,17 @@
 
 ## About The Project
 
-This project is required to build in **`node js`** with **`mongodb`** as backend. It provides following capability through API interface:
+This project is built in **`node js`** with **`mongodb`** as backend. It provides following capability through API interface:
 
-1. CSV File Upload from Multipart Form
-2. Scan the uploaded CSv and push its content in MongoDB collection
-3. API to perform CRUD operations on above collection
+1. Authentication and authorization using JWT tokens.
+2. Input validation and error handling to ensure data integrity and prevent attacks.
+3. Integration with a database - MongoDB.
+4. Pagination and sorting of resources to enable efficient querying and browsing.
+5. Caching of frequently accessed resources to improve performance and reduce
+   load on the database.
+6. API to perform CRUD operations on above collection
 
-The above API are using passport package for basic authentication to manage access
+The above API are using `jsonwebtoken` package for basic authentication to manage access
 
 ### Framework Used
 
@@ -69,15 +73,18 @@ The local machine should have **Node js**, **Postman** and **MongoDB** installed
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ArnavMahajan01/Kaplas.git
+   git clone https://github.com/ArnavMahajan01/RaftLabs-CRUD.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
-3. Make a `.env` file and inside the file enter your ` </br><p>``</p> `
-   Mongoose cluster path `DB_CONNECT = "YOUR PATH"`. `</br>`
-   Port number for your localhost `PORT = "Port Number"`
+3. Make a `.env` file and inside the file enter the desired Port number, Mongoose cluster path and a auth token
+   ```
+   DB_CONNECT = "YOUR PATH"
+   PORT = "YOUR PORT"
+   VERIFY_AUTH_TOKEN = "YOUR AUTH TOKEN"
+   ```
 
 <!-- USAGE -->
 
@@ -85,31 +92,25 @@ The local machine should have **Node js**, **Postman** and **MongoDB** installed
 
 In this section, the structure and the project flow is described.
 
-1. The project is divided into various section. There is a _**`middleware`**_ Folder alond with _**`controller`**_, _**`routes`**_ and _**`config`**_. In the\* **`others`\*** folder there is a dummy CSV file for upload. Upon using the routes and uploading it, the csv file is uploaded in _**`uploads`**_ folder
+1. The project is divided into various section. There is a _**`middleware`**_ folder along with _**`controller`**_, _**`routes`**_ and _**`models`**_. The `other` directory contains the images and the video walkthrough of the application. The `middleware` contains all the necessary middlewares like auth and cache system. The `controller` and `routes` contains are responsible for handling incoming requests and returning responses to the client to a particular endpoint. The `models` contains the schemas for the mongodb
 
-![Project Flow](/images/Project%20structure.png)
+   ![1678351241519](image/README/1678351241519.png)
 
-2. Various API's are called which help in acheiving various function. Like `http://localhost:3000/fileUpload` helps in uploading the CSV file and pushing the data into Mongoose. Similarly `http://localhost:3000/CRUDcreate`, `http://localhost:3000/CRUDread`, `http://localhost:3000/CRUDupdate`, `http://localhost:3000/CRUDdelete` helps in other CRUD operations CREATE, READ, UPDATE, DELETE respectively.
+2. Various API's are called which help in acheiving various function. Like `http://localhost:3000/register` helps in creating a new user and pushing the user's data into Mongoose. Similarly `http://localhost:3000/CRUDcreate`, `http://localhost:3000/CRUDread`, `http://localhost:3000/CRUDupdate`, `http://localhost:3000/CRUDdelete` helps in other CRUD operations CREATE, READ, UPDATE, DELETE respectively.
 
-2.1 API for CSV File upload
-This API will help upload a CSV file `</br></br>`
-![File Upload Insert](/images/File%20Upload%20insert.png)
-![File Upload Output](/images/File%20Upload%20outputpng.png)
+2.1 API outputs for User Authentication and Authorization
+These API will help user authentication and authorizations with the help of **JWT Tokens**
+
+![1678352272033](image/README/1678352272033.png)
 
 2.2 API for CRUD operations
 Following are the API for the crud operations
-`</br>`
 
-2.2.1 For CRUD-Create `</br></br>`
+2.2.1 For CRUD-Create
 ![CRUD Create](/images/CRUD%20create.png)
-2.2.2 For CRUD-Read `</br></br>`
+2.2.2 For CRUD-Read
 ![CRUD Read](/images/CRUD%20read.png)
-2.2.3 For CRUD-Update `</br></br>`
-![CRUD Update](/images/CRUD%20update.png)
-2.2.4 For CRUD-Delete `</br></br>`
+2.2.3 For CRUD-Update
+
+2.2.4 For CRUD-Delete
 ![CRUD Delete](/images/CRUD%20delete.png)
-
-3. Also there are two more API's register and login which help in the authentication and authorization with the help of passport
-
-![Register](/images/register.png)
-![Login](/images/login.png)
