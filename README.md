@@ -42,9 +42,9 @@ This project is built in **`node js`** with **`mongodb`** as backend. It provide
 
 The above API are using `jsonwebtoken` package for basic authentication to manage access
 
-### Framework Used
+### Framework/Environment Used
 
-Here are the major framwords which were used in the project
+Here are the major framworks/environment which were used in the project
 
 - [Nodejs](https://nodejs.org/en/)
 - [NPM package Manager](https://www.npmjs.com/)
