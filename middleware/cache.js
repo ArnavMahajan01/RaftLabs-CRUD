@@ -11,7 +11,9 @@ module.exports = (duration) => (req, res, next) => {
   const cacheResponse = cache.get(key);
 
   if (cacheResponse) {
-    res.status(200).json({ msg: "Cache Response: " + cacheResponse });
+    res
+      .status(200)
+      .json({ msg: "Cache Response: " + JSON.stringify(cacheResponse) });
   } else {
     res.originalSend = res.send;
     res.send = (body) => {

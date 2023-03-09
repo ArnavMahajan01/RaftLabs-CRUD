@@ -78,8 +78,8 @@ exports.delete = async function (req, res) {
   try {
     /* Using findbyIdAndRemove operation to remove
         the data with corresponding email */
-    const CRUDdelete = await CrudOperations.findOneAndUpdate(
-      user.email,
+    const CRUDdelete = await CrudOperations.findOneAndDelete(
+      { email: user.email },
       function (err, res) {
         if (err) {
           /* Sending error back to the server */

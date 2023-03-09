@@ -103,14 +103,15 @@ These API will help user authentication and authorizations with the help of **JW
 
 ![1678352272033](image/README/1678352272033.png)
 
+![1678352578626](image/README/1678352578626.png)
+
 2.2 API for CRUD operations
 Following are the API for the crud operations
 
 2.2.1 For CRUD-Create
-![CRUD Create](/images/CRUD%20create.png)
+![1678353276599](image/README/1678353276599.png)
 2.2.2 For CRUD-Read
-![CRUD Read](/images/CRUD%20read.png)
+
 2.2.3 For CRUD-Update
 
 2.2.4 For CRUD-Delete
-![CRUD Delete](/images/CRUD%20delete.png)
