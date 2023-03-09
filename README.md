@@ -112,6 +112,12 @@ Following are the API for the crud operations
 ![1678353276599](image/README/1678353276599.png)
 2.2.2 For CRUD-Read
 
+![1678353406269](image/README/1678353406269.png)
+
 2.2.3 For CRUD-Update
 
+![1678353448701](image/README/1678353448701.png)
+
 2.2.4 For CRUD-Delete
+
+![1678353617744](image/README/1678353617744.png)
