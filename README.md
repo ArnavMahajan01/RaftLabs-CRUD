@@ -23,6 +23,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#walkthrough">Walkthrough</a></li>
   </ol>
 </details>
 
@@ -121,3 +122,7 @@ Following are the API for the crud operations
 2.2.4 For CRUD-Delete
 
 ![1678353617744](image/README/1678353617744.png)
+
+## Walkthrough
+
+[Watch Video Here](https://drive.google.com/drive/folders/1d6HA3bnco58vFc0oKXnSKtk3VfCR1cxP?usp=share_link)
